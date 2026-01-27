@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentinel Automation Group</title>
+  <meta name="description" content="Sentinel Automation Group integrates automation and AI into SMB operations to increase efficiency, revenue performance, and scalability." />
+
+  <!-- Social sharing -->
+  <meta property="og:title" content="Sentinel Automation Group" />
+  <meta property="og:description" content="Business Operations, Automated. Automation + AI for SMBs — efficiency, revenue performance, scalability." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0f1220;
+      --bg-2:#0b0e1a;
+      --panel:#151a33;
+      --text:#e6e8f0;
+      --muted:#9aa0c3;
+      --brand:#4f7cff;
+      --brand-2:#7aa0ff;
+      --max: 1080px;
+      --radius: 12px;
+      --shadow: 0 12px 32px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--brand-2); }
+    a:hover { color: #cfe0ff; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid rgba(79,124,255,.7);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:10px;
+      background: var(--brand);
+      color:white;
+      padding:10px 14px;
+      border-radius: 10px;
+      text-decoration:none;
+      z-index: 9999;
+    }
+    .skip-link:focus { left:10px; }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 72px 0 56px;
+      background: linear-gradient(135deg, var(--bg), #1a1f3a);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    nav {
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0 0;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: .2px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 16px;
+      opacity: .95;
+    }
+    .navlinks {
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .navlinks a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    .navlinks a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+    }
+
+    .hero {
+      padding: 44px 0 0;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: clamp(22px, 3vw, 34px);
+      margin: 0 0 18px 0;
+      letter-spacing: -0.2px;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      letter-spacing: -0.1px;
+    }
+    p {
+      font-size: 17px;
+      margin: 0;
+      color: rgba(230,232,240,.95);
+      max-width: 72ch;
+    }
+    .muted { color: var(--muted); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 14px 18px;
+      background: var(--brand);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.10);
+      transition: transform .08s ease, filter .12s ease;
+    }
+    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    main section {
+      padding: 64px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      padding: 22px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+      min-height: 140px;
+    }
+    .card p { font-size: 15.5px; color: rgba(230,232,240,.9); }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .contact-box{
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-top: 16px;
+      max-width: 720px;
+    }
+    .contact-box a{ font-weight: 800; text-decoration: none; }
+
+    footer {
+      padding: 36px 0;
+      background: var(--bg-2);
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    footer p { font-size: 13px; color: var(--muted); max-width: none; }
+
+    @media (max-width: 560px){
+      .navlinks { justify-content: flex-start; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <a class="brand" href="#top">Sentinel Automation Group</a>
+        <div class="navlinks">
+          <a href="#what-we-do">What We Do</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero" id="top">
+        <h1>Business Operations, Automated.</h1>
+        <p>Sentinel Automation Group integrates automation and AI into SMB operations to increase efficiency, revenue performance, and scalability — without increasing headcount.</p>
+        <a href="#contact" class="btn" aria-label="Jump to contact section to request an automation audit">Request an Automation Audit</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="divider" role="presentation"></div>
+
+  <main id="main">
+    <section id="what-we-do">
+      <div class="container">
+        <h2>What We Do</h2>
+        <div class="grid" role="list">
+          <div class="card" role="listitem">
+            <h3>Revenue Automation</h3>
+            <p>Lead capture, automated follow-ups, booking systems, CRM automation, and sales workflow optimization.</p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Operations Automation</h3>
+            <p>Internal workflow automation, task orchestration, reporting pipelines, and process optimization.</p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Intelligence Layer</h3>
+            <p>AI-assisted analysis, forecasting support, performance insights, and decision-support systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <div class="container">
+        <h2>Why Sentinel Automation Group</h2>
+        <p class="muted">We do not sell tools or platforms. We build operational infrastructure. Our systems integrate into existing environments and modernize execution across revenue, operations, and management layers.</p>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="grid" role="list">
+          <div class="card" role="listitem">
+            <h3>1. Install</h3>
+            <p>System mapping, automation design, AI configuration, and workflow integration.</p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>2. Automate</h3>
+            <p>Deployment of automated revenue, operations, and reporting systems.</p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>3. Optimize</h3>
+            <p>Continuous improvement, monitoring, and performance optimization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Request an Automation Audit</h2>
+        <p class="muted">Discover how automation and AI can modernize your business operations.</p>
+
+        <div class="contact-box">
+          <p class="muted">Email</p>
+          <p><a href="mailto:contact@sentinelautomationgroup.com">contact@sentinelautomationgroup.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Sentinel Automation Group. All rights reserved.</p>
+      <p>Sentinel Automation Group provides automation and decision-support systems. We do not provide financial, legal, or regulatory advice. All AI systems are human-supervised.</p>
+    </div>
+  </footer>
+</body>
+</html>
